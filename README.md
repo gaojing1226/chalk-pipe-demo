@@ -6,16 +6,17 @@
 [![](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
 Create chalk style schemes with simpler style strings
+使用更简单的样式字符串创建粉笔样式
 
 ![](https://raw.githubusercontent.com/LitoMore/chalk-pipe/master/screenshot.png)
 
-## Install
+## Install（安装）
 
 ```bash
 $ npm install chalk-pipe
 ```
 
-## Usage
+## Usage（用法）
 
 ```javascript
 const chalkPipe = require('chalk-pipe');
@@ -24,6 +25,7 @@ console.log(chalkPipe('blue.bold')('Hello world!'));
 ```
 
 Use dot `.` to separeate multiple styles:
+使用点.分隔多个样式：
 
 ```javascript
 const link = chalkPipe('blue.underline');
@@ -36,6 +38,7 @@ console.log(warning('Warning!'));
 ```
 
 `chalkPipe` is also `chalk`:
+chalkPipe也是chalk：
 
 ```javascript
 const blue = chalkPipe('blue');
@@ -44,7 +47,7 @@ const link = blue.underline;
 console.log(link('Link!'));
 ```
 
-### Use custom chalk
+### Use custom chalk（使用自定义粉笔）
 
 ```javascript
 const chalk = require('chalk');
@@ -77,15 +80,15 @@ chalk.enable = true;
 chalkPipe('underline', chalk.blue)('Link!');
 ```
 
-## Valid styles
+## Valid styles（有效的样式）
 
-- [Modifiers](https://github.com/chalk/chalk#modifiers)
-- [Colors](https://github.com/chalk/chalk#colors)
-- [Background colors](https://github.com/chalk/chalk#background-colors)
-- [Hex triplet](https://en.wikipedia.org/wiki/Web_colors#Hex_triplet)
-- [CSS keywords](https://www.w3.org/wiki/CSS/Properties/color/keywords)
+- [Modifiers](https://github.com/chalk/chalk#modifiers)（修饰符）
+- [Colors](https://github.com/chalk/chalk#colors)（颜色）
+- [Background colors](https://github.com/chalk/chalk#background-colors)（背景颜色）
+- [Hex triplet](https://en.wikipedia.org/wiki/Web_colors#Hex_triplet)（六角三元组）
+- [CSS keywords](https://www.w3.org/wiki/CSS/Properties/color/keywords)（CSS关键字）
 
-## Related
+## Related（有关）
 
 - [chalk-pipe-cli](https://github.com/LitoMore/chalk-pipe-cli) - CLI for this module
 - [inquirer-chalk-pipe](https://github.com/LitoMore/inquirer-chalk-pipe) - A inquirer plugin for input chalk-pipe style strings
