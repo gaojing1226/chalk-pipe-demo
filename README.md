@@ -5,7 +5,8 @@
 [![](https://img.shields.io/npm/l/chalk-pipe.svg)](https://github.com/LitoMore/chalk-pipe/blob/master/LICENSE)
 [![](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
-Create chalk style schemes with simpler style strings  使用更简单的样式字符串创建粉笔样式
+Create chalk style schemes with simpler style strings  
+使用更简单的样式字符串创建粉笔样式
 
 ![](https://raw.githubusercontent.com/LitoMore/chalk-pipe/master/screenshot.png)
 
