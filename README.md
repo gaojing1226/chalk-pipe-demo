@@ -40,7 +40,6 @@ console.log(warning('Warning!'));
 ```
 
 `chalkPipe` is also `chalk`:  
-chalkPipe也是chalk：
 
 ```javascript
 const blue = chalkPipe('blue');
@@ -77,7 +76,8 @@ Example:
 ```javascript
 const chalk = require('chalk');
 
-chalk.enable = true;  
+chalk.enable = true;
+
 颜色支持自动检测，如果您想启用/禁用粉笔，则可以通过该.enabled属性进行操作。
 如果需要在可重用模块中更改此值，需创建一个新实例
 const ctx = new chalk.constructor({enabled: false});
