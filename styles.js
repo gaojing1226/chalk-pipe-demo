@@ -1,13 +1,13 @@
 module.exports = {
 	modifiers: [
-		'reset',
-		'bold',
-		'dim',
-		'italic',
-		'underline',
-		'inverse',
-		'hidden',
-		'strikethrough'
+		'reset',//样式重置
+		'bold',//加粗
+		'dim',//暗淡
+		'italic',//斜体
+		'underline',//下划线
+		'inverse',//相反的
+		'hidden',//隐藏
+		'strikethrough'//删除线
 	],
 
 	normalColors: [
@@ -16,7 +16,7 @@ module.exports = {
 		'green',
 		'yellow',
 		'blue',
-		'magenta',
+		'magenta',//品红
 		'cyan',
 		'white',
 		'gray',
@@ -25,7 +25,7 @@ module.exports = {
 		'yellowBright',
 		'blueBright',
 		'magentaBright',
-		'cyanBright',
+		'cyanBright',//青色
 		'whiteBright'
 	]
 };
