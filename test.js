@@ -1,15 +1,22 @@
 'use strict';
 
+//avac测试模块
 const test = require('ava');
 const chalk = require('chalk');
 
-const modifiers = require('./styles').modifiers;
-const normalColors = require('./styles').normalColors;
-const chalkPipe = require('.');
+const modifiers = require('../styles').modifiers;
+const normalColors = require('../styles').normalColors;
+const chalkPipe = require('..');
 
+
+//test()：执行一个测试，第一个参数为标题，第二参数为测试用例函数，
+//接收一个包含内置断言 API 的参数 t，也是唯一一个参数；
+//按照惯例这个参数名字叫做 t，没必要重新取名字。
+//执行测试 t.is()；第一个参数为实际值，第二个参数为期望值
 test('Modifiers', t => {
 	const scheme = chalkPipe(modifiers.join('.'));
 	const text = scheme('foo');
+	//预期值
 	const should = chalk
 		.reset
 		.bold
