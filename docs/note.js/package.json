@@ -1,0 +1,27 @@
+{
+  "name": "chalk-pipe",  //项目名称
+  "version": "1.1.0",  //项目版本号
+  "description": "Apply a color scheme in a style pipe",//项目描述
+  "main": "index.js",//主文件
+  "scripts": {
+    "test": "xo && ava"//一般默认一个test的空文件夹、用作写测试代码
+  },
+  "repository": {//用来存放到 版本管理远程服务。 发布npm才有用
+    "type": "git",
+    "url": "git+https://github.com/LitoMore/chalk-pipe.git"
+  },
+  "author": "LitoMore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LitoMore/chalk-pipe/issues"
+  },
+  "homepage": "https://github.com/LitoMore/chalk-pipe#readme",
+  "devDependencies": {//开发或者测试时，依赖的包
+    "ava": "^0.22.0",
+    "xo": "^0.18.2"
+  },
+  "dependencies": {//正式使用时，依赖的包
+    "chalk": "^2.1.0",
+    "css-color-names": "0.0.4"
+  }
+}
