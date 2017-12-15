@@ -13,39 +13,39 @@ const modifiers = require('./styles').modifiers;
 const normalColors = require('./styles').normalColors;
 
 
-//判断样式是否是修饰符
+//返回样式是否是修饰符的布尔值
 function isModifier(style) {
 	return Boolean(style.match(`^(${modifiers.join('|')})$`));
 }
 
-//判断样式是否是背景颜色
+//返回样式是否是背景颜色的布尔值
 function isBackground(style) {
 	return Boolean(style.match(/^bg.+$/));
 }
 
-//判断样式是否是normalcolor值
+//返回‘判断颜色是否是normalcolor值'的布尔值
 function isNormalColor(style) {
 	return Boolean(style.match(`^(${normalColors.join('|')})$`)); 
 }
 
 
-//判断样式是否是十六进制颜色
+//返回‘颜色是否是十六进制所表示’的布尔值
 function isHexColor(style) {
 	return Boolean(style.match(/^#[0-9A-Fa-f]{6}$/));
 }
 
-//判断样式是否是颜色关键字
+//返回‘颜色是否是关键字所表示’的布尔值
 function isKeyword(style) {
 	return Boolean(cssColorNames[style]);
 }
 
 //暴露粉笔样式的函数
 //第一个参数：stylePipe代表 粉笔管样式
-//第二个参数: customChalk 不传参默认为chalk
+//第二个参数: customChalk 可以开启自定义粉笔；不传默认参数为chalk
 module.exports = function (stylePipe, customChalk) {
 
-	//创建变量paint用来输出文本样式 
-	let paint = customChalk || chalk;   ？？
+	//customChalk 允许传一个自己定义的 chalk ，如果不传这个参数默认require('chalk') 中的 chalk 
+	let paint = customChalk || chalk;   
 
 	//如果传入的样式不存在或没有写样式，则直接返回paint
 	if (!stylePipe || stylePipe.length === 0) {
@@ -57,7 +57,7 @@ module.exports = function (stylePipe, customChalk) {
 
 	for (let i = 0; i < styles.length; i++) {
 		let style = styles[i];
-		//设置背景变量为false为后面区分是背景颜色还是字体颜色作铺垫
+		//设置背景变量为false为后面区分是背景颜色还是字体颜色
 		let isBg = false;
 
 		// 如果样式代表修饰符
@@ -104,7 +104,7 @@ module.exports = function (stylePipe, customChalk) {
 		}
 
 		// 如果颜色样式为keyWord
-		else if (isKeyword(style)) {  ？？
+		else if (isKeyword(style)) {  
 			if (isBg) {
 				paint = paint.bgKeyword(style);
 			} else {
